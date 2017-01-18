@@ -1,0 +1,25 @@
+---
+title: "Bio381 Homepage"
+author: "Erin Keller"
+date: "January 18, 2017"
+output: html_document
+---
+
+# Erin Keller
+
+## Computational Biology
+
+Lists:   
+
+* [Assignment 1](test.html)     
+* [Assignment 2](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)   
+
+
+![Frog Picture](frog-1.jpg)   
+
+```{r}
+## this is a test comment
+car<-2
+```
+
+
