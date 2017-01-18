@@ -5,21 +5,20 @@ date: "January 18, 2017"
 output: html_document
 ---
 
-# Erin Keller
+# Computational Biology   
+## Erin Keller
+![](erinkeller.jpg)
 
-## Computational Biology
+## Contact Information   
 
-Lists:   
+ekeller2@uvm.edu   
+MLS 204   
+[Here](https://www.uvm.edu/~biology/?Page=students/kellererin.php&SM=facultysubmenu.html) is my UVM webpage!
 
-* [Assignment 1](test.html)     
-* [Assignment 2](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)   
+## Assignments
 
+* Assignment 1   
+* Assignment 2   
 
-![Frog Picture](frog-1.jpg)   
-
-```{r}
-## this is a test comment
-car<-2
-```
 
 
