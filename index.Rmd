@@ -2,7 +2,10 @@
 title: "Bio381 Homepage"
 author: "Erin Keller"
 date: "January 18, 2017"
-output: html_document
+output: 
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
 ---
 
 # Computational Biology   
@@ -17,8 +20,8 @@ MLS 204
 
 ## Assignments
 
-* Assignment 1   
-* Assignment 2   
+* [Homework 02](Assignment2.html)  
+* Homework 03   
 
 
 
