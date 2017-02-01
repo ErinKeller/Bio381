@@ -1,0 +1,134 @@
+---
+title: "Mammal Phylogeny"
+author: "Erin Keller"
+date: "Tuesday, March 29th 2016"
+output:
+  beamer_presentation:
+    colortheme: beaver
+---
+## Part I - Identifying Structure and Function
+
+- Observe different structures of mammal skulls
+- Propose claims about the life history of 4 species based on skull structure
+
+## 
+ \begin{picture}(320,250)
+ \put(00,20){\includegraphics[height=7cm]{LabeledSkull.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+
+## Terms
+ 
+- “mandible” = lower jaw
+- “orbit” = eye socket
+- “fossa” = depression or hole
+- “process” = outward projection
+- “condyle” = a knob such as the ball of a ball and socket joint
+
+## Important Muscles
+ \begin{picture}(320,250)
+ \put(00,20){\includegraphics[height=6.5cm]{ImportantMuscles.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+
+## Blood Vessels 
+- Skulls need depressions, channels, and canals for arteries and veins to allow for blood flow
+- Alisphenoid canal found in some animals underneath upper jaw
+ \begin{picture}(320,250)
+ \put(30,40){\includegraphics[height=6.5cm]{BloodVessels.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+## Eyes
+- Eye orientation
+  - Predators have forward-facing eyes
+  - Prey have side-facing eyes
+- Eye Size
+  - Nocturnal species have larger 
+  
+ \begin{picture}(320,250)
+ \put(200,100){\includegraphics[height=4cm]{Eyes1.jpg}}
+ \put(200,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+
+
+ ## Teeth
+- The lifestyles of mammals require being able to capture, ingest, and digest food efficiently
+  - Mammalian teeth have been modified to obtain and ingest food more efficiently
+  
+ \begin{picture}(320,250)
+ \put(30,50){\includegraphics[height=6.5cm]{Teeth.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+ ## Types of Teeth
+ - Incisors
+ - Canines
+ - Premolars
+ - Molars
+ 
+ \begin{picture}(320,250)
+ \put(30,70){\includegraphics[height=6cm]{DentalDiagram.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+ ## Incisors
+ - Thin teeth located at the front of the jaw
+ - Used for slicing food
+ 
+ \begin{picture}(320,250)
+ \put(30,50){\includegraphics[height=6.5cm]{Incisors.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+ ## Canines
+- Located right next to the incisors (if they have them!)
+- Used for tearing food
+ \begin{picture}(320,250)
+ \put(30,50){\includegraphics[height=6.5cm]{Canines.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+ ## Premolars and Molars
+- Located behind canines
+- Used for chewing, generally with multiple cusps (points)
+- Only adults have molars!
+  - Eutherians (placental mammals) have maximum of 4 premolars and 3 molars
+  - Metatherians (marsupials)have a maximum of 3 premolars and 4 molars
+  
+ \begin{picture}(320,250)
+ \put(30,50){\includegraphics[height=6.5cm]{Molars.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+ ## Carnassials 
+ 
+- Order Carnivora have these
+- Specialized teeth which slide together to slice meat
+- P^4^ and M^1^ = carnassial pair, overlap
+
+ \begin{picture}(320,250)
+ \put(30,50){\includegraphics[height=6cm]{Carnassials1.jpg}}
+ \put(00,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+
+ 
+## Note
+\color{red} \huge These skulls are fragile and expensive!  Try not to handle them any more than you have to.  When you do pick them up, do so over a padded surface so in case they are accidentally dropped they will be less likely to break.
+
+
+
+
+
+
+

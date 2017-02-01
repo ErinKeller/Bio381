@@ -1,8 +1,8 @@
 ---
-title: "Test"
+title: "test"
 author: "Erin Keller"
-date: "January 18, 2017"
-output: html_document
+date: "January 25, 2017"
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}

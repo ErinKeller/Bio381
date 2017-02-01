@@ -10,7 +10,8 @@ output:
 
 # Computational Biology   
 ## Erin Keller
-![](erinkeller.jpg)
+<img src="erinkeller.jpg" width="200" height="200" />   
+
 
 ## Contact Information   
 
@@ -21,7 +22,8 @@ MLS 204
 ## Assignments
 
 * [Homework 02](Assingment2.html)  
-* Homework 03   
+* [Homework 03](FlowChart.html) 
+*  
 
 
 

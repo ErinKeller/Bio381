@@ -1,0 +1,64 @@
+---
+title: "MarkdownDem"
+author: "Erin Keller"
+date: "January 26, 2017"
+output: html_document
+---
+#Latex   
+Only active when surrounded by $$
+
+
+### Subscripts in Latex
+
+$$H_0 = Z_{a + b}$$
+
+In Markdown, we say H~0~  
+
+### Superscrips in Latex
+
+$$S = cA^z$$
+
+### Combining elements:
+
+$$S=cA^z_1 = z_{2 + x_0}$$
+
+### Special symbols and fraction   
+
+$$\alpha = \frac{\beta}{\gamma + \delta_x}$$
+
+
+### Using the backslash
+
+$$\backslash \alpha \le b \backslash$$
+
+### Summation Sign
+
+$$z = \sum_{i=1}^X{K}$$
+
+### Rendering plaintext in LaTex
+
+$$P(\mbox{Occurence of Species A}) = Z$$
+
+### Making a "Chunk"
+Alt + Cmd + i
+
+```{r, echo=FALSE}
+plot(runif(20))
+print(seq(1,5))
+
+```
+
+{r, echo=FALSE} removes rscript
+
+```{r, eval=FALSE}
+plot(runif(20))
+print(seq(1,5))
+
+```
+{r, eval=FALSE} will not run
+
+```{r}
+plot(runif(20))
+print(seq(1,5))
+```
+{r} default. Code is shown and evaluated

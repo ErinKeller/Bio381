@@ -1,0 +1,31 @@
+---
+title: "Untitled"
+author: "Erin Keller"
+date: "January 31, 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beetle
+---
+## First slide
+
+- first point
+- second point
+- third point
+
+## Moving on
+
+```{r, echpo=FALSE}
+plot(runif(10))
+
+```
+
+## Another final slide
+
+> - \color{red}First sumultaneous bullet point
+> - \color{blue}second
+> - \color{black}and so on
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
