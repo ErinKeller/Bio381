@@ -1,3 +1,5 @@
+## Below is my flow chart made with Mermaid in Typora.
+
 ```mermaid
 graph LR
 A{Gametocysts present?} 
@@ -24,3 +26,11 @@ A{Gametocysts present?}
     
  
 ```
+
+
+
+## Below are the links to my original and Beamer-updated PowerPoint:
+
+[Original PPT](Mammal Phylogeny Lab.pdf)
+
+[Updated Beamer PPT PDF](BeamerPresentation.pdf)
