@@ -117,7 +117,8 @@ output:
 - P^4^ and M^1^ = carnassial pair, overlap
 
  \begin{picture}(320,250)
- \put(30,50){\includegraphics[height=6cm]{Carnassials1.jpg}}
+ \put(20,50){\includegraphics[height=4cm]{Carnassials1.jpg}}
+ \put(150,50){\includegraphics[height=4cm]{Carnassials2.jpg}}
  \put(00,50){\begin{minipage}[t]{1\linewidth}
  \end{minipage}}
  \end{picture}

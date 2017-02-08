@@ -1,0 +1,80 @@
+---
+title: "Assignment 4"
+author: "Erin Keller"
+date: "February 8, 2017"
+output: html_document
+---
+```{r}
+AmynthasData<-read.table("AmynthasCollectionsDissections2015.csv",header=TRUE,sep=",",stringsAsFactors = F)
+head(AmynthasData)
+tail(AmynthasData)
+str(AmynthasData)
+table(AmynthasData)
+summary(AmynthasData)
+```
+## Regular Expression Problems   
+### Problem 1   
+**Given:**
+First String    Second      1.22      3.4
+Second          More Text   1.555555  2.2220
+Third           x           3         124
+
+**Solution:** 
+*Find What:* ```\s{2,}```
+*Replace with:* ,
+
+First String,Second,1.22,3.4   
+Second,More Text,1.555555,2.2220   
+Third,x,3,124   
+
+### Problem 2
+**Given:**   
+Ballif, Bryan, University of Vermont
+Ellison, Aaron, Harvard Forest
+Record, Sydne, Bryn Mawr
+
+**Solution:**
+*Find What:* ```(\w+), (\w+), (\w+\s.*)```
+*Replace with:* ```\2 \1 \(\3\)```
+
+Bryan Ballif (University of Vermont)   
+Aaron Ellison (Harvard Forest)   
+Sydne Record (Bryn Mawr)   
+
+### Problem 3   
+**Given:**   
+0001 Georgia Horseshoe.mp3 0002 Billy In The Lowground.mp3 003 Cherokee Shuffle.mp3 0004 Walking Cane.mp3   
+
+**Solution:**
+*Find What:* ```(\S.\w{2}\d\s{1})```
+*Replace with:* ```\1\n```
+
+0001 Georgia Horseshoe.mp3   
+0002 Billy In The Lowground.mp3   
+0003 Cherokee Shuffle.mp3   
+0004 Walking Cane.mp3   
+
+### Problem 4
+**Given:**
+Camponotus,pennsylvanicus,10.2,44
+Camponotus,herculeanus,10.5,3
+Myrmica,punctiventris,12.2,4
+Lasius,neoniger,3.3,55
+
+**Solution a:**
+*Find What:* ```(\w)\w+,(\w+),\d+\.\d,```
+*Replace with:* ```\1_\2,```   
+
+C_pennsylvanicus,44   
+C_herculeanus,3   
+M_punctiventris,4   
+L_neoniger,55   
+
+**Solution b:**
+*Find What:* ```(\w)\w+,(\w{4})\w+,\d+\.\d,```
+*Replace with:* ```\1_\2,```
+
+C_penn,44   
+C_herc,3   
+M_punc,4   
+L_neon,55   
