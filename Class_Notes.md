@@ -92,7 +92,9 @@ $ is how R refers to any variable
 ## Regular expression
 
 * Must be in a plain text editor 
+
 * Can use regular expression in R studio (we will not be used in this class)
+
 * Notepad ++ can be used
   * "." are **literal characters** 
   * **Metacharacters** (wildcards = metacharacter sequence)
@@ -128,3 +130,92 @@ $ is how R refers to any variable
     * **\w{3,}** - 3 or more matches
       * E.x. [ATCG]{3,} give at least 3 nucleotides 
     * **.*** - "Get everything" matches all text
+
+  # February 9, 2017
+
+  ## Regular expression continued
+
+  Common change in ecology:
+
+  ​	Lasius neoniger --> L_neoniger
+
+  ​	Lasius umbratus --> L_umbratus
+
+  ​	Myrmica punctiventris --> M_punctiventris
+
+  Regular expression required: 
+
+  ​	Find: (\w)\w+\s(\w+)
+
+  ​	Replace: \1_\2
+
+* **Boundary stakes**
+
+  * **^** - start of line
+
+  * **$** - end of line
+
+  * **\b** - beginning OR ending of a word 
+
+    * e.g. \ba\b will find just "a" while \ba will find all words starting with a and \ba\B will find only the "a" at the start of the word and nothing else
+
+  * **\B** - NOT beginning OR ending of a word
+
+  * Can use parentheses and quantifiers to select variable numbers of patterns
+
+    * e.g. (\w+\s)* will pick up anything with at least one string of letters/numbers followed by a space zero to any amounts of time
+
+  * Can also use multiple sets of parentheses
+
+  * Can quantify brackets (negators as well)
+
+    ​
+
+# February 14, 2017
+
+## Disadvantages of R
+
+* Interpreted language (slow)
+* lazy evaluation 
+  * X<-5
+  * x<-"Burlington" (quotes = string variable)
+  * Sometimes jumps to conclusions
+* 10s of thousands of functions that are difficult to learn (what functions will actually do what you want)
+* Poorly documented functions (not explained well)
+* Unreliable packages
+  * some give incorrect results!
+  * Sometimes it is faster to do it yourself
+* Problem with big data sets (bioinformatic data sets)
+  * functions that use C code (much faster and can accommodate large data sets)
+  * Julia (new coding language, very similar to R) operates as fast as 4Tran or C
+
+## Different Data Types
+
+### Dimensions
+
+* 1-dimensional
+* 2-dimensional
+* n-dimensional
+
+### Content
+
+* homogenous (all elements of same kind)
+* heterogenous (not all elements are of the same kind)
+
+### Structures
+
+
+* | Dimensions | homogenous    | heterogenous |
+  | ---------- | ------------- | ------------ |
+  | 1D         | Atomic Vector | List         |
+  | 2D         | Matrix        | Data Frame   |
+  | dD         | (array)       |              |
+
+
+### Types of Atomic Vectors
+
+* character strings (represent words)
+* integers (counting numbers) | numeric
+* double (rational number) | numeric
+* logical (true/false)
+* (factor) | classification of different levels of a character variable
