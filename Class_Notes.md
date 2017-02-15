@@ -214,7 +214,7 @@ $ is how R refers to any variable
 
 ### Types of Atomic Vectors
 
-* character strings (represent words)
+* character strings (represent words) | letters
 * integers (counting numbers) | numeric
 * double (rational number) | numeric
 * logical (true/false)
