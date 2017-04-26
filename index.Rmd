@@ -9,7 +9,8 @@ output:
 ---
 
 # Computational Biology   
-## Erin Keller
+## Erin L. Keller
+
 <img src="erinkeller.jpg" width="200" height="200" />   
 
 
