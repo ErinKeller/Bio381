@@ -1,9 +1,0 @@
-### nrow
-#### Erin L. Keller
-nrow will report the number of rows of an array. The input arguments can be a vector, array, or data frame and the output will be a single integer reporting the number of rows. 
-```{r}
-matrix<-matrix(1:10,2,5)
-print(matrix)
-nrow(matrix)
-```
-

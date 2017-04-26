@@ -1,9 +1,0 @@
-### rle
-#### Erin L. Keller
-rle standard for "Run Length Encoding" and determines the lengths and values of runs of equal values in a vector. The input argument must be an atomic vector and the ouput will indicate the lengths of the runs (integer) and the values of the run (numeric). The function, inverse.rle can also be used to transform the output of rle back into a vector.
-```{r}
-a<-c(1,1,2,2,2,2,3,3,3,4,5,5,5,6)
-rle(a)
-b<-inverse.rle((rle(a)))
-print(b)
-```

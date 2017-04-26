@@ -25,15 +25,6 @@ MLS 204
 * [Homework 03](FlowChart.html)   
 * [Homework 04](Assignment4.html)
 * [Homework 05](Assignment5.html)
-* [Homework 06]()
-* [Homework 07]()
-* [Homework 08]()
-* [Homework 09]()
-* [Homework 10]()
 
-
-## Shiny Tutorial
-
-* [Shiny Tutorial](ShinyTutorial.html)
 
 

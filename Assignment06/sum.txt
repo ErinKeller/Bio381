@@ -1,8 +1,0 @@
-### sum
-#### Erin L. Keller
-The sum function calculates the sum of all values in the argument. If no arguments are given, the sum is "0" by definition. The input arguments can be numerical or complex vectors and the output will be an integer. If a non-numeric value is present in the argument, you will receive an error message. 
-```{r}
-sum(1:5)
-a<-1:5
-sum(a+1)
-```
