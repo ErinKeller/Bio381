@@ -1,0 +1,14 @@
+### Seq
+#### Erin L. Keller
+Seq is the function for sequence generation and is a standard generic function. The arguments  needed for this function are:
+  * from, to - indicate what the starting and ending values of the sequence should be
+  * by - the increment of the sequence (default = 1)
+  * length.out - optional, the desired length of the sequence
+  * along.with - takes the length from the length
+  * : - can be used to create sequences of sequential numbers
+
+The ouput for this function is a integer or double vector containing the desired sequence.
+```{r}
+Sequence <-seq(c(1:10,20:30,40:50)) # multiple sequences can be concatenated together to form one sequence
+print(Sequence)
+```

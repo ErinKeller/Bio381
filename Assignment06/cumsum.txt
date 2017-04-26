@@ -1,0 +1,8 @@
+### cumsum
+#### Erin L. Keller
+the cumsum function returns a vector which contains the cumulative sums of the elements of the input arguments (i.e. the first value in the output vector is the sum of the first element, the second value in the output vector is the sum of the first two elements, and so on). The input argument must be a numeric or complex object and the output is a numeric vector. If NA is included in the input argument, each sum from the position of NA on will be reported as "NA".
+```{r}
+cumsum(1:10)
+a<-c(1,2,3,NA,4)
+cumsum(a)
+```

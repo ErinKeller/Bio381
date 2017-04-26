@@ -1,0 +1,221 @@
+---
+title: "median"
+author: "Erin Keller"
+date: "February 22, 2017"
+output: html_document
+---
+
+### median
+#### Erin L. Keller
+
+The purpose of this function is to **calculate the median** value of a vector. The median value of a set of number is the value at the midpoint of the vector, so there are equal amounts of items on either side of the midpoint. In the case of a vector with an even number of values, the median function will take the average of the two midpoint values. The input for this function is a numerical vector and the ouput is an integer.
+
+To use this function, you will need two arguments:   
+* x - the numeric vector from which you want the median   
+* na.rm - logial value specifying whether NA values should be included or discarded in the calculation   
+  * na.rm = FALSE will not include NA values (default)   
+  * na.rm = TRUE will include NA values   
+  
+  
+```{r}
+z <- 1:10
+print(z)
+median(z, na.rm=FALSE)
+
+```
+
+### complete.cases
+#### Erin L. Keller
+
+The function complete.cases indicates what values in your data (vectors, matrix, data frames) are complete (do not have missing values, no NA). The input for this function needs to be a vector, matrix, or data frame and the output will be a logical vector with "TRUE" indicating that the value is complete (no missing data) while a "FALSE"  indicates that the value is incomplete (missing data, NA). This function is useful for identifying missing data in data sets, although if the intent is to discard NA values, na.omit is a better function to use. 
+
+```{r}
+test<-c(0,1.5,NA,5,4.5,NA,3,3,NA)
+complete.cases(test)
+```
+
+### seq_len
+#### Erin L. Keller
+Seq_len is a seqeunce generator that outputs a sequence of values from 1 to the value specified in the parentheses and is equivalent to seq(length.out=). Sequence length will automatically be inferred if the start and end values are given in the seq function (i.e. seq(from=1, to=20), sequence length will be 20). It is important to note that all numerical inputs should be finite.
+```{r}
+a<-seq_len(10)
+b<-seq_len(0)
+print(a)
+print(b)
+```
+
+### read.fwf
+#### Erin L. Keller
+
+The purpose of read.fwf to to read a table of **f**ixed **w**idth **f**ormatted data into a data.frame. To use this function, you will need multiple arguments including:
+  * the name of the file containing the data
+  * the width of the fixed-dwitch fields in the form of a vector
+  * a header containing a logical value specifying names of the variables
+      * if this is present, the names of the variables must be delimited by sep
+  * a character not used in the data set that will be the separator (sep)
+  * row and column names (row.names and col.names)
+  * n is the maximu number of lines to be included
+  * skip can be used to identify how many rows should be skipped when reading the fwf file.
+  * buffersize indicates the maximum number of lines to be read at one time (reducing this may reduce memory use when dealing with large files leading to faster processing)
+
+The output of read.fwf will be a data frame as produced by read.table.
+
+```{r}
+x <- read.fwf(
+  file=url("http://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for"),
+  skip=4,
+  widths=c(12, 7, 4, 9, 4, 9, 4, 9, 4))
+
+head(x)
+
+```
+
+
+### +
+#### Erin L. Keller
+
+The + in R is used to indicate the addition of numbers as it is used in arithmetic. Using + is simple and only requires two values to be added together. Spaces between the values and the + are optional. The input value can be a vector, data frame, or matrix and the ouput value will be integers.
+
+```{r}
+a<-4.4
+b<-1.2
+c<-a+b
+print(c)
+
+d<-1:2
+e<-d+1
+print(e)
+```
+
+### is.numeric
+#### Erin L. Keller
+
+is.numeric determines whether a particular variable is numeric or not. The only input needed is the object to be tested (variable) and the output will be a logical vector with "TRUE" indicating that the variable is numeric (double or integers) and "FALSE" indicating that the variable is not numeric. It is important to note that while double is identical to numeric, however, is.double is not the same as is.numeric.
+```{r}
+x<-4
+y<-"Yes"
+is.numeric(x)
+is.numeric(y)
+```
+
+### <=
+#### Erin L. Keller
+
+<= is an inequality sign that can be used to determine if the value to the left of the carat is smaller than or equal to the value to the right of the equal sign. The input arguments can be integers, atomic vectors, etc. and the ouput that is given is a logical vector where "TRUE" indicates that the inequality is correct and "FALSE" indicates that the inequality is incorrect.
+```{r}
+a<-1
+b<-2
+a<=b
+b<=a
+```
+
+### sum
+#### Erin L. Keller
+The sum function calculates the sum of all values in the argument. If no arguments are given, the sum is "0" by definition. The input arguments can be numerical or complex vectors and the output will be an integer. If a non-numeric value is present in the argument, you will receive an error message. 
+```{r}
+sum(1:5)
+a<-1:5
+sum(a+1)
+```
+
+### nrow
+#### Erin L. Keller
+nrow will report the number of rows of an array. The input arguments can be a vector, array, or data frame and the output will be a single integer reporting the number of rows. 
+```{r}
+matrix<-matrix(1:10,2,5)
+print(matrix)
+nrow(matrix)
+```
+
+### as.data.frame
+#### Erin L. Keller
+as.data.frame will report whether a given input value is a data frame. This is important as some functions require data to be in a data frame format (which is similar to a matrix but is distinct from a matrix). The input value can be any element of interest and the output value will be a logical vector, where "TRUE" indicates that the element of interest is in data frame format while "FALSE" indicates that the element of interest is not in data frame format. To coerce data into a data frame, use the as.data.frame function. 
+```{r}
+matrix<-matrix(1:10,2,5)
+is.data.frame(matrix)
+matrix2<-as.data.frame(matrix)
+is.data.frame(matrix2)
+```
+
+
+### rle
+#### Erin L. Keller
+rle standard for "Run Length Encoding" and determines the lengths and values of runs of equal values in a vector. The input argument must be an atomic vector and the ouput will indicate the lengths of the runs (integer) and the values of the run (numeric). The function, inverse.rle can also be used to transform the output of rle back into a vector.
+```{r}
+a<-c(1,1,2,2,2,2,3,3,3,4,5,5,5,6)
+rle(a)
+b<-inverse.rle((rle(a)))
+print(b)
+```
+
+### cumsum
+#### Erin L. Keller
+the cumsum function returns a vector which contains the cumulative sums of the elements of the input arguments (i.e. the first value in the output vector is the sum of the first element, the second value in the output vector is the sum of the first two elements, and so on). The input argument must be a numeric or complex object and the output is a numeric vector. If NA is included in the input argument, each sum from the position of NA on will be reported as "NA".
+```{r}
+cumsum(1:10)
+a<-c(1,2,3,NA,4)
+cumsum(a)
+```
+
+### -
+#### Erin L. Keller
+The - symbol, or the "minus sign" subtracts the value after the "-" from the value before the "-" as it does in arithmetic and reports the difference between those two values. The input value can be a vector, data frame, or matrix and the ouput value will be integers in a vector, matrix, or data frame (matching the input format).
+```{r}
+a<-matrix(1:6,3,2)
+b<-matrix(3:8,3,2)
+c<-b-a
+print(c)
+```
+
+### subset
+#### Erin L. Keller
+Subset is a function that pulls out data from the input object that meets the criteria of interest specified in the function. The input object can be vectors, data frames, and matrices and the arguments to be included are:
+  * x - the object to be subsetted
+  * subset - this is a logical expression where one specifies what elements to keep and to subset. Missing values are not included
+  * select - an expression which indicates what columns to select from a data frame (only used for data frames and matrices)
+  * drop - eliminates dimensions of an array that have only one level
+
+The output to this function will be similar to the input object containing only the selected elements (vector) or rows/columns (matrix, data frame). It is important to note that some factors will have empty levels after subsetting and those that are unused will be removed.
+
+```{r}
+a <- matrix(c(runif(10, min = 80, max = 100),(runif(10, min=85, max = 115))),nrow=10,ncol=2)
+colnames(a)<-c("MaxTemp2015","MaxTemp2017")
+print(a)
+subset(a, a[,1]>90 & a[,2]>100) # this will subset the original data matrix so that MaxTemp2015 will only diplay values over 90 while MaxTemp2017 will only display values greater than 100.
+```
+
+### t
+### Erin L. Keller
+t is a function that transposes a matrix or data frame (i.e. it will flip the column and rows). The input object, x, is typically a matrix or data frame; however, a coerced vector can be used as well. The ouput of t is a matrix with dim and dimnames constructed and all other elements of the original matrix.
+```{r}
+a <- matrix(1:10, 2, 5)
+colnames(a) <- LETTERS[1:5]
+print(a)
+ta <- t(a)
+print(ta)
+```
+
+### print
+#### Erin L. Keller
+
+print is a function that displays the ouput of the input object while making the arguments invisible. Typically, this function is used to visualize data and the same result can be achieved by simply typing the variable name. For this function, inputs of any form can be used; however, some forms may require additional information including:
+  * quote - a logical object used to indicate whether strings should be printed
+  * max.levels - an integer indicating how many levels for a factor should be printed. The detault is NULL which will print on one line of a specified width
+  * digits - the minimum number of significant digits
+  * na.print - a character string which indicates NA values in the output
+  * zero.print - this character can specify if 0's should be included (some people prefer looking at decimals without the 0)
+  * justify - a character that indicates whether strings should be right- or left-justified or not justified
+  * useSource - this logical indicates whether an internally stored source should be present when printing (keep.source=TRUE if in use)
+  
+print.factor allows further customization whiel print.table allows further customization for tables.
+The output of this function will be the form of the input object.
+
+```{r}
+Rainfall <- matrix(c(1.2,2.4,4.2,6.3,8.9,11.1,12.2,10.7),4,2)
+colnames(Rainfall)<-c("Desert","Deciduous")
+rownames(Rainfall)<-c("December","February","March","April")
+print(Rainfall)
+```
+
+
+

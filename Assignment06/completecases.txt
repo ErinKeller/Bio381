@@ -1,0 +1,9 @@
+### complete.cases
+#### Erin L. Keller
+
+The function complete.cases indicates what values in your data (vectors, matrix, data frames) are complete (do not have missing values, no NA). The input for this function needs to be a vector, matrix, or data frame and the output will be a logical vector with "TRUE" indicating that the value is complete (no missing data) while a "FALSE"  indicates that the value is incomplete (missing data, NA). This function is useful for identifying missing data in data sets, although if the intent is to discard NA values, na.omit is a better function to use. 
+
+```{r}
+test<-c(0,1.5,NA,5,4.5,NA,3,3,NA)
+complete.cases(test)
+```

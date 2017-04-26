@@ -1,0 +1,25 @@
+### read.fwf
+#### Erin L. Keller
+
+The purpose of read.fwf to to read a table of **f**ixed **w**idth **f**ormatted data into a data.frame. To use this function, you will need multiple arguments including:
+  * the name of the file containing the data
+  * the width of the fixed-dwitch fields in the form of a vector
+  * a header containing a logical value specifying names of the variables
+      * if this is present, the names of the variables must be delimited by sep
+  * a character not used in the data set that will be the separator (sep)
+  * row and column names (row.names and col.names)
+  * n is the maximu number of lines to be included
+  * skip can be used to identify how many rows should be skipped when reading the fwf file.
+  * buffersize indicates the maximum number of lines to be read at one time (reducing this may reduce memory use when dealing with large files leading to faster processing)
+
+The output of read.fwf will be a data frame as produced by read.table.
+
+```{r}
+x <- read.fwf(
+  file=url("http://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for"),
+  skip=4,
+  widths=c(12, 7, 4, 9, 4, 9, 4, 9, 4))
+
+head(x)
+
+```

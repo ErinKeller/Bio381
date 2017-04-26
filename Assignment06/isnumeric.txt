@@ -1,0 +1,10 @@
+### is.numeric
+#### Erin L. Keller
+
+is.numeric determines whether a particular variable is numeric or not. The only input needed is the object to be tested (variable) and the output will be a logical vector with "TRUE" indicating that the variable is numeric (double or integers) and "FALSE" indicating that the variable is not numeric. It is important to note that while double is identical to numeric, however, is.double is not the same as is.numeric.
+```{r}
+x<-4
+y<-"Yes"
+is.numeric(x)
+is.numeric(y)
+```

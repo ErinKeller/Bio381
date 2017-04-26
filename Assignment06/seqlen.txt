@@ -1,0 +1,9 @@
+### seq_len
+#### Erin L. Keller
+Seq_len is a seqeunce generator that outputs a sequence of values from 1 to the value specified in the parentheses and is equivalent to seq(length.out=). Sequence length will automatically be inferred if the start and end values are given in the seq function (i.e. seq(from=1, to=20), sequence length will be 20). It is important to note that all numerical inputs should be finite.
+```{r}
+a<-seq_len(10)
+b<-seq_len(0)
+print(a)
+print(b)
+```

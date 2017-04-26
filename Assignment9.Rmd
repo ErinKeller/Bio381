@@ -1,0 +1,57 @@
+---
+title: "Untitled"
+author: "Erin Keller"
+date: "March 29, 2017"
+output: html_document
+---
+Logistic regression
+```{r}
+###################################################################
+# Function: LogReg
+# Completes a logistic regression and outputs summary of logistic regression
+# Inputs: continuous numeric vector for x and a discrete vector for y
+# Outputs: summary of logisic regression
+
+LogReg <- function(data=cbind(runif(10),runif(10))) {
+  x <- data[,2]
+  y <- data[,1]
+  dataFrame <- data.frame(x,y)
+
+  
+  logRegModel <- glm(y ~ x,
+                 data=dataFrame,
+                 family=binomial(link="logit"))
+  
+  print(summary(logRegModel))
+}
+
+
+#################################################
+# Function: GraphLogReg
+# graphs the logistic regression
+# inputs: continuous numeric vector for x and a discrete vector for y
+# outputs: graph of logistic regression
+
+
+GraphLogReg <- function(data=cbind(runif(10),runif(10))) {
+  x <- data[,2]
+  y <- data[,1]
+  dataFrame <- data.frame(x,y)
+  logRegModel <- glm(y ~ x,
+                 data=dataFrame,
+                 family=binomial(link="logit"))
+  
+plot(x=dataFrame$x, y=dataFrame$y,pch=21,bg="violet",cex=2.5)
+curve(predict(logRegModel,data.frame(x=x),type="response"),add=TRUE,lwd=2)
+}
+
+```
+# With my data
+```{r}
+data<- read.table("SporCount.csv",header=TRUE,sep=",")
+data1 <- data[,1:2]
+LogReg(data1)
+
+GraphLogReg(data1)
+```
+

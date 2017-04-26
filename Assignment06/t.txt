@@ -1,0 +1,10 @@
+### t
+### Erin L. Keller
+t is a function that transposes a matrix or data frame (i.e. it will flip the column and rows). The input object, x, is typically a matrix or data frame; however, a coerced vector can be used as well. The ouput of t is a matrix with dim and dimnames constructed and all other elements of the original matrix.
+```{r}
+a <- matrix(1:10, 2, 5)
+colnames(a) <- LETTERS[1:5]
+print(a)
+ta <- t(a)
+print(ta)
+```

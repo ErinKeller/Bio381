@@ -1,0 +1,21 @@
+### print
+#### Erin L. Keller
+
+print is a function that displays the ouput of the input object while making the arguments invisible. Typically, this function is used to visualize data and the same result can be achieved by simply typing the variable name. For this function, inputs of any form can be used; however, some forms may require additional information including:
+  * quote - a logical object used to indicate whether strings should be printed
+  * max.levels - an integer indicating how many levels for a factor should be printed. The detault is NULL which will print on one line of a specified width
+  * digits - the minimum number of significant digits
+  * na.print - a character string which indicates NA values in the output
+  * zero.print - this character can specify if 0's should be included (some people prefer looking at decimals without the 0)
+  * justify - a character that indicates whether strings should be right- or left-justified or not justified
+  * useSource - this logical indicates whether an internally stored source should be present when printing (keep.source=TRUE if in use)
+  
+print.factor allows further customization whiel print.table allows further customization for tables.
+The output of this function will be the form of the input object.
+
+```{r}
+Rainfall <- matrix(c(1.2,2.4,4.2,6.3,8.9,11.1,12.2,10.7),4,2)
+colnames(Rainfall)<-c("Desert","Deciduous")
+rownames(Rainfall)<-c("December","February","March","April")
+print(Rainfall)
+```

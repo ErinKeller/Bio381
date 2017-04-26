@@ -1,0 +1,9 @@
+### as.data.frame
+#### Erin L. Keller
+as.data.frame will report whether a given input value is a data frame. This is important as some functions require data to be in a data frame format (which is similar to a matrix but is distinct from a matrix). The input value can be any element of interest and the output value will be a logical vector, where "TRUE" indicates that the element of interest is in data frame format while "FALSE" indicates that the element of interest is not in data frame format. To coerce data into a data frame, use the as.data.frame function. 
+```{r}
+matrix<-matrix(1:10,2,5)
+is.data.frame(matrix)
+matrix2<-as.data.frame(matrix)
+is.data.frame(matrix2)
+```

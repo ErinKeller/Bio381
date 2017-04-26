@@ -1,0 +1,18 @@
+### median
+#### Erin L. Keller
+
+The purpose of this function is to **calculate the median** value of a vector. The median value of a set of number is the value at the midpoint of the vector, so there are equal amounts of items on either side of the midpoint. In the case of a vector with an even number of values, the median function will take the average of the two midpoint values. The input for this function is a numerical vector and the ouput is an integer.
+
+To use this function, you will need two arguments:   
+* x - the numeric vector from which you want the median   
+* na.rm - logial value specifying whether NA values should be included or discarded in the calculation   
+  * na.rm = FALSE will not include NA values (default)   
+  * na.rm = TRUE will include NA values   
+  
+  
+```{r}
+z <- 1:10
+print(z)
+median(z, na.rm=FALSE)
+
+```

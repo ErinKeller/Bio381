@@ -1,0 +1,9 @@
+### -
+#### Erin L. Keller
+The - symbol, or the "minus sign" subtracts the value after the "-" from the value before the "-" as it does in arithmetic and reports the difference between those two values. The input value can be a vector, data frame, or matrix and the ouput value will be integers in a vector, matrix, or data frame (matching the input format).
+```{r}
+a<-matrix(1:6,3,2)
+b<-matrix(3:8,3,2)
+c<-b-a
+print(c)
+```

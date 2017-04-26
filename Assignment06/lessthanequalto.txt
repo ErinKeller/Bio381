@@ -1,0 +1,10 @@
+### <=
+#### Erin L. Keller
+
+<= is an inequality sign that can be used to determine if the value to the left of the carat is smaller than or equal to the value to the right of the equal sign. The input arguments can be integers, atomic vectors, etc. and the ouput that is given is a logical vector where "TRUE" indicates that the inequality is correct and "FALSE" indicates that the inequality is incorrect.
+```{r}
+a<-1
+b<-2
+a<=b
+b<=a
+```

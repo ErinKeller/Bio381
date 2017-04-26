@@ -219,3 +219,112 @@ $ is how R refers to any variable
 * double (rational number) | numeric
 * logical (true/false)
 * (factor) | classification of different levels of a character variable
+
+# March 2, 2017
+
+## Creating new functions in R
+
+* Use many hashtags to keep track of all the code
+* Three things to always have:
+  * Function: FunctionName <- function(parameterX=defaultX,parameterY=defaultY,parameterZ=defaultZ){lines of R code + annotations, calls to other functions, create new functions, operations on parX, parY, and parZ...myOut....return(myOut)}
+    * function called function that allows us to name our own functions and we can also set the default values for each parameter (which we can do with random number generators to test the function to see if it is doing what we want)
+    * Open { denotes the beginning of the function body while } indicates the end of the function body. This will treat everything in the curly brackets and it will run all at the same time.
+    * "myOut" is a single variable and it contains everything we want to come out of the function and when we write "return(myOut)" denotes what the output will be (in a list)
+  * Description
+  * Inputs:
+  * Outputs:
+* We can use the function how we would use any other function
+  * print(FunctionName) will spit out all the code you've written for that function
+  * FunctionName(a,b,c) where a,b,c are values for the parameters
+  * FunctionName() will also call the function
+* A function should be short, no more than a screen's worth
+  * longer than that you should break it up into smaller pieces of functions
+
+    ​
+
+    ​
+
+    ​
+
+    ​
+
+    ​
+
+    ​
+
+# March 9, 2017
+
+## Presentations:
+
+* research: (~15mins)
+  * BRIEF (seconds) introduction 
+  * Describe HOW you anallyzed the data in detail
+* R tutorial (30mins)
+  * Can be any script
+
+## Pseudocode
+
+Pretty much all we do with a program is:
+
+* Get data
+* Calculate stuff
+* Summarize output
+* Graph results
+
+Crtrl+Shft+C will comment or uncomment text!
+
+
+
+# March 21, 2017
+
+## Guest lecturer: Brandon Ogbunugafor 
+
+### Modeling the ecology of disease
+
+* Darwin's Dangerous Idea - Daniel Dennett
+  * Dennett's calculator: you can understand things at a certain level but it doesn't necessarily explain the phenomenon. Use when we don't know not because we don't know. Unmasks ignorance. 
+* Mathematical model - mathematical description of a scenario or situation from the real-world. Simplification or abstraction. 
+* Why study epidemic models?
+  * supplement statistical extrapolations
+  * Learn more about the qualitative dynamics of disease
+  * Test hypotheses - transmission dynamics, prevention
+* Kinds of models
+  * deterministic - treat time as a continuous function, and a population as large and displaying average behaviors
+  * discrete-time - time as discrete units where different things happen at different time steps
+  * stochastic models - parameters are drawn from a distribution
+  * individual-based models - population composed of individuals
+    * large populations = difficult and long computations
+  * network models - framework for considering how the contact between interactors is important
+* SIR epidemic model
+  * Kermack and McKendrick 1927
+  * Susceptible, infected, recovered
+  * S + I + R = 1
+  * consider a disease spread by contact with infected individuals
+  * Individuals recover the disease and gain further immunity from it
+  * Tracks the dynamics of infection
+  * define a rate of change for a group of things (individuals, populations)
+    * S --> I (infection rate = beta)
+    * I --> R (recovery rate = u [mu])
+  * R0 = beta/mu > 1 ~ number of secondary infections caused by a primary infection
+  * How do you control epidemics?
+    * reduce # susceptible (vaccination)
+    * Reduce beta (prevention)
+    * Increase mu (treatment)
+* Ordinary differential equations (ODE) and formalized flow diagrams (OFFL)
+  * ​
+
+# April 6 2017
+
+ctrl+shft+1 --> makes the script screen large
+
+crtl+shift+3 --> makes the help screen large
+
+ctrl+shift+9 --> makes the results screen large
+
+ctrl+shift+2 --> console large
+
+Doing any of the commands again will bring you back to the 4 panel screen
+
+
+
+[row, column]
