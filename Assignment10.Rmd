@@ -1,0 +1,127 @@
+---
+title: "Assignment10"
+author: "Erin Keller"
+date: "May 2, 2017"
+output: html_document
+---
+---
+title: "Assignment10"
+author: "Erin Keller"
+date: "April 5, 2017"
+output: html_document
+---
+# Question 1: Using for loops to determine # zeros in a numerical vector
+```{r}
+Vector <- c(0,0,1,1,0,1,0,1,1,1)
+head(Vector)
+Vec0<-vector(mode="logical")
+for (i in 1:length(Vector)) {
+  if (Vector[i] == 0) {
+    Vec0[i] <- 1 
+     }
+  else {
+    Vec0[i]<- 0
+  }
+}
+  sum(Vec0)
+
+```
+
+# Question 2: Using subsetting rather than for loops
+```{r}
+Vector <- c(0,0,1,1,0,1,0,1,1,1)
+
+length((Vec0) <= subset(Vector, Vector == 0))
+```
+# Question 3: Maximum difference between all pairs
+### Script courtesy of Alex Looi, annnotations done by Erin L. Keller
+```{r}
+X = rnorm(20, mean = 0, sd = 10) # sampling 20 random numbers with mean of 0
+
+max_diff = function(X){
+  
+  pairs = expand.grid(X,X) # identifying all pairwise comparisons in X
+  diffs = abs(pairs$Var1 - pairs$Var2) # calculating the absolute difference between all pairs
+  
+  max_difference = max(diffs, na.rm = T) # determining max difference by using the max function to determine the largest diference present in the diffs vector
+  
+  return(max_difference) # returns the max difference
+  
+}
+max_diff(X)
+
+```
+
+# Question 4: Modifying output of Question 3 to contain 3 elements: 1st is the pair of values that give the greatest difference, 2nd is the position of these elements, and 3rd is the maximum distance from this pair
+```{r}
+X = rnorm(20, mean = 0, sd = 10)
+
+max_diff = function(X= rnorm(20, mean = 0, sd = 10)){
+  
+  pairs = as.matrix(expand.grid(X,X))
+  diffs = abs(pairs[,1] - pairs[,2]) # up until this point in the script is the same as Q3
+  
+  vec_max = which.max(diffs) # this is selecting the maximum difference from all pairs
+  
+  pair_max = pairs[vec_max,] # this is identify which pair of values generated largest difference
+  
+  max_difference = max(diffs, na.rm = T) # This is pulling out the maximum difference between two values
+  
+  var1_vec = which(pair_max[1] == X) # this is determining the position of the first value of the pair
+  var2_vec = which(pair_max[2] == X) # this is determinig the position of the second value of the pair
+  pair_vec = c(var1_vec, var2_vec) # this is concatenating the above output and contains the position of these values
+  
+  output = list(pair_max, pair_vec, max_difference) # ouput will be a list containing the 3 (really 4) values
+  
+  return(output)
+  
+}
+max_diff()
+```
+# Question 5: Keep only maximum difference but cycle through all possibilities
+```{r}
+X = rnorm(20, mean = 0, sd = 10)
+
+max_diff = function(X= rnorm(20, mean = 0, sd = 10)){
+  
+  pairs = expand.grid(X,X) # making pairwise comparisons
+  diffs = abs(pairs$Var1 - pairs$Var2) # calculating absolute difference between every pairwise comparison
+  temp_max = 0 # creating a temporary maximum vector containing what will be the largest difference
+  for(v in 1:length(diffs)){ # for loop in which each pairwise comparison is being evaluated (length(diffs) means that every difference value in the vector will be evaluated)
+    
+    if(temp_max <= diffs[v]){ # if statement saying that if the difference value being evaluated is less than or equal to what is already in the temp_max file
+      temp_max = diffs[v] # so if this is true (new diff is the greater than what was previously stored) then we replace what is in temp_max with the new maximum difference
+    }
+  }
+  return(temp_max)
+}
+max_diff(X)
+```
+
+# Question 6: Multiplying two matrices together
+```{r}
+M1 = matrix(c(1:6),2,3, byrow = T) # generating two matrices
+M2 = matrix(c(7:12),3,2, byrow = T)
+
+Mat_mult = function(M1, M2){ # creatig function that will take the two matrices as inputs and multiply them together
+  # create a new matrix table
+  M3 = matrix(0, nrow(M1), ncol(M2)) # making empty matrix with rows = # rows in M1 and columns = # columns in M2
+  if (nrow(M1) != ncol(M2)){ # if the row and column lengths are not equal, give the following warning:
+    cat("input matrices are not correct dimensions", "\n")
+  } else { # if they are the same length, do the following:
+    for (nr in 1:nrow(M1)){ # for the number of rows in 1:length of M1 and for the number of columns in 1:length of M2, take the product of the values at the corresponding position in the matrix
+      for (nc in 1:ncol(M2)){
+        cell_val = sum(M1[nr,]*M2[,nc])
+        M3[nr,nc] = cell_val # output will be a matrix containing the product of the two matrices
+      }
+    }
+  }
+  return(M3)
+}
+
+Mat_mult(M1, M2)
+
+# Using R funtion formultiplying matrices:
+M1%*%M2 # returns same result!
+```
+# Question 7: 

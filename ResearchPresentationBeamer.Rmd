@@ -1,0 +1,235 @@
+---
+title: "Variable Life History Traits in *Monocystis sp.*"
+author: "Erin L. Keller - Department of Biology, UVM"
+date: "2 May 2017"
+output:
+  beamer_presentation:
+    colortheme: beaver
+    incremental: yes
+---
+# *Monocystis*
+>- Phylum: Apicomplexa
+>- Class: Gregarinomorphea ("classical gregarines")
+>- Studied since ~1900
+>- Considered an examplar parasite of the gregarines
+
+ \begin{picture}(250,250)
+ \put(50,60){\includegraphics[height=6cm]{Monocystis.jpg}}
+ \put(50,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+# *Monocystis* sp. in *Amynthas agrestis*
+ >- *A. agrestis* colloquially known as the "crazy snake worm"
+ >- earthworm has annual life cycle (early April - early November)
+ >- putatively transmitted horizontally 
+ 
+ \begin{picture}(250,250)
+ \put(50,60){\includegraphics[height=6cm]{Amynthas.jpg}}
+ \put(50,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+ 
+ 
+ 
+# Life History Questions and hypotheses
+ 
+ \begin{itemize}
+  \item{What is the phenology of the parasite and does the phenology differ between two sites?}
+    \begin{itemize}
+      \item{H0: The phenology of the parasite at HF and AU is not different}
+      \item{HA: The phenology of the parasite at HF and AU is different}
+    \end{itemize}
+  \item{What is the life history of the parasite (sporocysts/gametocyst) and does this vary between sites?}
+    \begin{itemize}
+      \item{H0: There is no difference in sporocysts/gametocyst between sites}
+      \item{HA: There is a difference in sporocysts/gametocyst between sites}
+    \end{itemize}
+  \end{itemize}
+  
+    
+
+ 
+# Study Sites
+
+ \begin{picture}(250,250)
+ \put(70,10){\includegraphics[height=5cm]{Sites.jpg}}
+ \put(0,230){\begin{minipage}[t]{1\linewidth}
+  \begin{itemize}
+    \item{Earthworms from each site collected every week from April 6, 2015 - November 10, 2015}
+      \begin{itemize}
+        \item{University of Vermont Horticultural Research and Education Center (Hort Farm, or HF)}
+        \item{Centennial Woods Natural Area (CW)}
+        \item{Green Mountain Audubon Center (AU)}
+      \end{itemize}
+    \end{itemize}
+ \end{minipage}}
+ \end{picture}
+
+
+# Methods - Phenology and Measuring Parasitemia
+>- 10 worms/site dissected each week
+>- infection status determined (infected, not infected)
+>- Counted # parasites/1uL homogenized seminal vesicle
+>- Total parasitemia = parasites/1uL x total volume seminal vesicle (uL)
+
+# Methods - Selecting a Life History Trait
+>- Life history trait: sporocysts/gametocyst
+>- gametocyst formed from mating of two parasites
+>- gametocyst contains variable number of sporocysts
+>- 1 sporocyst gives rise to 8 parasites capable of establishing infection
+>- sporocysts/gametocyst can be used as estimate of reproductive output
+
+\begin{picture}(200,250)
+ \put(60,115){\includegraphics[height=5cm]{Gametocyst.jpg}}
+ \end{picture}
+
+
+# Methods - Measuring Sporocysts/Gametocyst
+>- 10 earthworm infections per site
+>- Images of 30 gametocysts/earthworm
+>- Determined # sporocysts/gametocyst 
+>- Total = 600 gametocysts counted
+
+ \begin{picture}(250,250)
+ \put(50,70){\includegraphics[height=6cm]{CountSpor.jpg}}
+ \put(80,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+
+# Analysis - Life History Traits
+\begin{minipage}[t]{1\linewidth}
+  \begin{itemize}
+    \item{Conducted Shapiro-Wilk Normality Test on counts for HF and AU}
+    \item{Nested ANOVA}
+      \begin{itemize}
+        \item{Groups: Sites (HF and AU)}
+        \item{Subgroups: individuals}
+      \end{itemize}
+    \end{itemize}
+  \end{minipage}
+
+
+# Parasite Phenology Results
+ \begin{picture}(250,250)
+ \put(-90,0){\includegraphics[height=9cm]{Parasitemia.jpeg}}
+ \put(50,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+ 
+# Parasite Phenology Results
+>- AU and CW same phenology (weeks 16-32)
+>- HF has shorter season (weeks 20-32)
+>- Week 33 was a hard-freeze at all sites and killed all worms
+
+# Sporocysts/Gametocyst Results
+ \begin{picture}(250,250)
+ \put(40,10){\includegraphics[height=7cm]{HistMean.jpeg}}
+ \put(0,230){\begin{minipage}[t]{1\linewidth}
+  \begin{itemize}
+    \item{Quite a bit of overlap of the histograms}
+      \begin{itemize}
+        \item{Audubon: mean = 140.39, sd = 28.81}
+        \item{Hort Farm: mean = 145.21, sd = 20.71}
+      \end{itemize}
+    \end{itemize}
+ \end{minipage}}
+ \end{picture}
+
+
+
+
+# Normality Results
+ \begin{picture}(250,250)
+ \put(-15,10){\includegraphics[height=6cm]{HFHist.jpeg}}
+ \put(150,10){\includegraphics[height=6cm]{AUHist.jpeg}}
+ \put(0,230){\begin{minipage}[t]{1\linewidth}
+  \begin{itemize}
+    \item{Shapiro-Wilk Normality Test Results}
+      \begin{itemize}
+        \item{Audubon: W = 0.98394, p-value = 0.00194}
+        \item{Hort Farm: W = 0.99056, p-value = 0.05046}
+      \end{itemize}
+    \end{itemize}
+ \end{minipage}}
+ \end{picture}
+
+# Nested ANOVA 
+
+ \begin{picture}(250,250)
+ \put(30,5){\includegraphics[height=7cm]{Boxplot.jpeg}}
+ \put(0,230){\begin{minipage}[t]{1\linewidth}
+  \begin{itemize}
+    \item{Nested ANOVA Results}
+      \begin{itemize}
+        \item{Site: F = 9.08, p-value = 0.0027}
+        \item{Individual: F = 22.34, p-value = <2e-16}
+      \end{itemize}
+    \end{itemize}
+ \end{minipage}}
+ \end{picture}
+ 
+ # Summary
+ \begin{itemize}
+  \item{Parasite phenology varies between sites}
+    \begin{itemize}
+      \item{AU and CW parasite season: weeks 16-32}
+      \item{HF parasite season: weeks 20-32}
+      \item{HF parasite season 2 weeks shorter, but earthworm season appears to be ~3 weeks longer at HF}
+    \end{itemize}
+  \item{Do life history traits (sporocysts/gametocyst) differ between sites?}
+    \begin{itemize}
+      \item{HF has a higher mean number of sporocysts/gametocyst than AU}
+    \end{itemize}
+  \end{itemize}
+
+# Going forward
+ \begin{itemize}
+  \item{Determine if earthworm season differs between AU and HF}
+    \begin{itemize}
+      \item{3 years of soil temperature data for AU and HF}
+      \item{5*C is when \textsl{A. agrestis} begin to hatch, and below freezing is when they die}
+    \end{itemize}
+  \item{What about Centennial Woods?}
+    \begin{itemize}
+      \item{CW did not produce gametocysts!}
+      \item{How is CW maintaining the parasite?}
+      \item{Possibly vertical transmission...}
+    \end{itemize}
+  \end{itemize}
+  
+# Example of Soil Temperature Data
+ \begin{picture}(250,250)
+ \put(-200,0){\includegraphics[height=9cm]{SoilTemp.jpeg}}
+ \put(50,50){\begin{minipage}[t]{1\linewidth}
+ \end{minipage}}
+ \end{picture}
+
+# Acknowledgements
+ \begin{itemize}
+  \item{My Committee:}
+    \begin{itemize}
+      \item{Dr. Joseph J. Schall}
+      \item{Dr. Josef Gorres}
+      \item{Dr. Lori Stevens}
+    \end{itemize}
+  \item{Special thanks to:}
+    \begin{itemize}
+      \item{Dr. William C. Kilpatrick}
+      \item{Samantha Connolly}
+      \item{Land managers for permission to collect (HF, CW, AU)}
+      \item{University of Vermont}
+    \end{itemize}
+  \end{itemize}
+
+# 
+\centering
+\Huge Questions?
+
+
+
+
+
+
+

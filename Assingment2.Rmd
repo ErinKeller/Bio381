@@ -11,9 +11,19 @@ These are the tools I have used to structure my experimental design and hypothes
 ## Mock Data   
 ![](MockData.jpg)
 
+
 *This method provides me with an idea of what different results would look like.*   
 
 ## Look Up Tree   
 ![](LookUpTree.jpg)
 
+
 *This method allows me to come up with interpretations based on the presence or absense of three variables.*   
+
+## Path Diagram
+![](PathDiagram.jpg)
+*This method allows me to picture all of the different interactions between variabels that may lead to a particular outcome.*
+
+## Logic Tree
+![](LogicTree.jpg)
+*This method allows me to step through my experimental design and see what conclusions I can make based off of my observations.*
