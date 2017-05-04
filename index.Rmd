@@ -29,7 +29,7 @@ MLS 204
 * [Homework 07](Assignment06.html)
 * [Homework 08](Assignment08.html)
 * [Homework 09](Assignment09.html)
-* [Homework 10]()
+* [Homework 10](Assignment10.html)
 
 ## Shiny Presentation
 * [Shiny](https://erinlkeller.shinyapps.io/ShinyTutorial/)

@@ -12,7 +12,7 @@ output: html_document
 # fits a regression line
 # inputs: continuous numeric vector for both x and y variables
 # outputs: slope, p-value, and R^2 value
-fitLinearSummary <- function(y=runif(50,x=runif(50))) {
+fitLinearSummary <- function(y=runif(50),x=runif(50)) {
   yVar <-y
   xVar <- x
   dataFrame <- data.frame(yVar,xVar)
@@ -39,7 +39,7 @@ fitLinearSummary(yLin,xLin) # as expected, the R squared value is 1; however, th
 # Plots a scatter plot of data with the  R squared value, slope, and pvalue
 # Inputs: Continuous numerical vector for both variables
 # Outputs: scatter plot with line of best fit
-plotLinear <- function(y=runif(50),x=runif(50),) {
+plotLinear <- function(y=runif(50),x=runif(50)) {
   yVar <-y
   xVar <- x
   dataFrame <- data.frame(yVar,xVar)

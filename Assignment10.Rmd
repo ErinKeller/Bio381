@@ -34,7 +34,7 @@ Vector <- c(0,0,1,1,0,1,0,1,1,1)
 length((Vec0) <= subset(Vector, Vector == 0))
 ```
 # Question 3: Maximum difference between all pairs
-### Script courtesy of Alex Looi, annnotations done by Erin L. Keller
+### From this point forward, script courtesy of Alex Looi, annnotations done by Erin L. Keller
 ```{r}
 X = rnorm(20, mean = 0, sd = 10) # sampling 20 random numbers with mean of 0
 
@@ -125,3 +125,20 @@ Mat_mult(M1, M2)
 M1%*%M2 # returns same result!
 ```
 # Question 7: 
+##Write a function that takes as input two integers representing the number of rows and columns in a matrix. The output is a matrix of these dimensions in which each element is the product of the row number x the column number
+
+```{r}
+M1 = matrix(c(1:6),2,3, byrow = T)
+
+Mat_thing = function(nr, nc){ # number of rows and number of columns are the two input variables
+  M = matrix(0, nr, nc) # constructing a matrix filled with 0's that has the dimensions specified by nr and nc
+  for (r in 1:nr){ # for each value r from 1:nr (number of rows)...
+    for (c in 1:nc){ # for each value r from 1:nc *(number of columns)...
+      M[r,c] = r*c # multiply the number of the row by the number of the column and put it into matrix M at the position corresponding to the row/column
+    } 
+  }
+  return(M)
+}
+Mat_thing(4, 6)
+```
+
